@@ -1,0 +1,62 @@
+/*
+* styles.css
+* Sarah Young
+* October 24, 2016
+* Custom CSS for CSCI3172 - Lab #3
+*/
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	width: 25em;
+	background-color: #f1f1f1;	
+	vertical-align:top;		
+}
+
+li {
+	float:left;
+}
+
+li a {
+	display: inline-block;
+	color: black;
+	padding: .5em 1em;
+	text-decoration: none;
+	text-align: center;
+}	
+
+li a.active {
+	font-style: italic;
+	color: #3d7182;
+}	
+
+li a:hover:not(.active) {
+	font-style: italic;
+	color: #3d7182;
+}
+
+
+.footer{
+  position: absolute;
+  width:100%;
+  top-padding:10%;
+  padding-bottom: 1%;
+  padding-top: 3%;
+  background-color: #3d7182;
+  text-align: center;
+}
+
+.footer ul{
+	width: 100%;
+}
+.footer ul li{
+	width: 100%;
+
+}
+.footer ul li a{
+float:center;
+color:white;
+padding: 0em;
+}
+
