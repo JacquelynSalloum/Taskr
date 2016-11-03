@@ -1,4 +1,4 @@
-<div class="footer">
+<div id="footer">
           <div class="row">  
             <div class="four columns">
               <ul>

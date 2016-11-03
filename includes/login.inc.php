@@ -4,12 +4,12 @@
 
         <div class="four columns">
           <label for="exampleEmailInput">Username</label>
-          <input class="u-full-width" type="text" placeholder="Username..." id="userName">
+          <input class="u-full-width" type="text" placeholder="Username..." name="userName" id="userName">
         </div>
 
         <div class="four columns"> 
             <label for="exampleEmailInput">Password</label>
-            <input class="u-full-width" type="password" placeholder="Password..." id="password">
+            <input class="u-full-width" type="password" placeholder="Password..." name="password" id="password">
         </div>
 
         <div class="four columns">

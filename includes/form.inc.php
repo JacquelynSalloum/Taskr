@@ -2,34 +2,34 @@
       <div class="row">
         <div class="six columns">
           <label for="exampleEmailInput">First name</label>
-          <input class="u-full-width" type="text" placeholder="First name..." id="firstName">
+          <input class="u-full-width" type="text" placeholder="First name..." name="firstName" id="firstName">
         </div>
         <div class="six columns">
           <label for="exampleEmailInput">Last name</label>
-          <input class="u-full-width" type="text" placeholder="Last name..." id="lastName">
+          <input class="u-full-width" type="text" placeholder="Last name..." name="lastName"id="lastName">
         </div>
       </div>
         <div class="row">
         <div class="six columns">
           <label for="exampleEmailInput">Username</label>
-          <input class="u-full-width" type="text" placeholder="Username..." id="userName">
+          <input class="u-full-width" type="text" placeholder="Username..." name="userName" id="userName">
         </div>
       </div>
 
         <div class="row">
         <div class="six columns">
           <label for="exampleEmailInput">Email</label>
-          <input class="u-full-width" type="email" placeholder="test@mailbox.com" id="email">
+          <input class="u-full-width" type="email" placeholder="test@mailbox.com" name="email" id="email">
         </div>
       </div>
       <div class="row">
         <div class="six columns">
           <label for="exampleEmailInput">Password</label>
-          <input class="u-full-width" type="password" placeholder="Must contain at least one number..." id="password">
+          <input class="u-full-width" type="password" placeholder="Must contain at least one number..." name="password" id="password">
         </div>
         <div class="six columns">
           <label for="exampleEmailInput">Confirm password</label>
-          <input class="u-full-width" type="password" placeholder="Confirm..." id="confirmPassword">
+          <input class="u-full-width" type="password" placeholder="Confirm..." name="confirmPassword" id="confirmPassword">
         </div>
       </div>
       <input class="button-primary" type="submit" value="Register">
@@ -85,8 +85,6 @@
       form.password.focus();
       return false;
     }
-
-    alert("You entered a valid password: " + form.password.value);
     return true;
   }
 </script>
