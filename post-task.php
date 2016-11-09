@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +5,7 @@
   <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
-  <title>CSCI3172 - Lab 3</title>
+  <title>CSCI3172 - Project</title>
   <meta name="description" content="">
   <meta name="author" content="">
 
@@ -29,7 +28,7 @@
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="icon" type="image/png" href="images/user.png">
 
 </head>
 
@@ -40,16 +39,25 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 <div class="container">
 
-      <div class="row">
-        <div class="twelve columns" style="margin-top:5%; text-align:center">
-          <h4>Your account has been created!</h4>
+      <?php
+        include 'includes/header-logged.inc.php';
+      ?>  
 
-        </div>   
+      <div class="row">
+        <div class="six columns">
+          <br>
+          <h5> Post a Task </h5>
+          <?php
+            include 'includes/post.inc.php';
+          ?>
+
+        </div>
+      </div>  
+
       </div>
 
-</div> 
-<?php
-  include 'includes/footer.inc.php';
-?>
+      <?php
+        include 'includes/footer.inc.php';
+      ?>
 </body>
 </html>

@@ -34,19 +34,23 @@ li a {
 
 li a.active {
 	font-style: italic;
-	color: #3d7182;
+	color: #4C9256;
 }	
 
 li a:hover:not(.active) {
 	font-style: italic;
-	color: #3d7182;
+	color: #4C9256;
+}
+
+.card-display{
+	border: 1px solid #9d9b9a;
 }
 
 #footer{
   width:100%;
   margin: 0 auto;
   top-padding:10%;
-  background-color: #3d7182;
+  background-color: #4C9256;
   text-align: center;
 }
 
