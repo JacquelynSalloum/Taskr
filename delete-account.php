@@ -1,7 +1,5 @@
 <?php
-
-session_start()
-
+session_start();
 ?>
 
 <!DOCTYPE html>
@@ -34,7 +32,7 @@ session_start()
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="image/png" href="images/user.png">
+  <link rel="icon" type="image/png" href="images/logo.png">
 
 </head>
 
@@ -45,44 +43,30 @@ session_start()
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 <div class="container">
 
-      <?php
-        include 'includes/header-logged.inc.php';
-      ?>  
+  <?php
+    include 'includes/header-logged.inc.php';
+  ?> 
 
-     <div class="row">
-        <div class="twelve columns" style="margin-top:5%">
-          <hr>
-        </div>   
-      </div>
+    <div class="row">
+      <div class="twelve columns" style="margin-top:5%">
+     
 
-      <div class="row">
-        <div class="four columns" style="margin-top:5%; min-width:300px">
-          <h5>Select a Category</h5>
-          <select input class="u-full-width" onchange="location =this.value;">
-            <option value="categories.php">All Categories</option>
-            <option value="indoor-categories.php">Indoor</option>
-            <option value="outdoor-categories.php">Outdoor</option>
-            <option value="build-repair-categories.php">Build/Repair</option>
-            <option value="food-delivery-categories.php">Food/Deliveries</option>
-          </select>
-        </div>
-      </div>
+        <h4>Are you sure you want to delete your account?</h4> 
 
+        <form action="delete-account-final.php">
+          <input type="submit" value="Yes">
+        </form>
+        <form action="profile-page.php">
+          <input type="submit" value="No, go back to my profile">
+        </form>
 
-      </script>
-
-      <div class="row">
-        <div class="twelve columns" style="margin-top:5%">
-
-          <?php
-            include 'includes/card.inc.php';
-          ?>
-
-          <br>
-        </div>   
-      </div>
 
       </div>
+    </div>
 
+</div> 
+<?php
+  include 'includes/footer.inc.php';
+?>
 </body>
 </html>

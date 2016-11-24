@@ -8,7 +8,7 @@
     margin: 0;
 }
 html, body {
-    height: 100%;
+    min-height: 100%;
 }
 
 ul {
@@ -42,28 +42,34 @@ li a:hover:not(.active) {
 	color: #4C9256;
 }
 
-.card-display{
-	border: 1px solid #9d9b9a;
+h4{
+	text-align: center;
 }
 
-#footer{
+
+.footer{
   width:100%;
-  margin: 0 auto;
-  top-padding:10%;
   background-color: #4C9256;
   text-align: center;
+  position: relative;
+  bottom:0;
+  left:0;
 }
 
-#footer ul{
+.footer ul{
 	width: 100%;
 }
-#footer ul li{
+.footer ul li{
 	width: 100%;
 
 }
-#footer ul li a{
+.footer ul li a{
 float:center;
 color:white;
-padding: 0em;
+padding: 0px;
 }
+.content{
+	min-height: 100%;
+}
+
 

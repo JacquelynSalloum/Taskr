@@ -1,7 +1,11 @@
 <?php
+session_start();
 
-session_start()
-
+		$_SESSION['email'] = $_POST['email'];
+		$_SESSION['firstName'] = $_POST['firstName'];
+		$_SESSION['lastName'] = $_POST['lastName'];
+		$salt = '378570bd25c8efa9bfdcfb64f99e';
+		$_SESSION['password'] = hash_hmac('md5', $_POST['password'], $salt);
 ?>
 
 <!DOCTYPE html>
@@ -34,7 +38,7 @@ session_start()
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="image/png" href="images/user.png">
+  <link rel="icon" type="image/png" href="images/logo.png">
 
 </head>
 
@@ -46,43 +50,38 @@ session_start()
 <div class="container">
 
       <?php
-        include 'includes/header-logged.inc.php';
+        include 'includes/header.inc.php';
       ?>  
 
-     <div class="row">
-        <div class="twelve columns" style="margin-top:5%">
-          <hr>
-        </div>   
+      <div class="row">
+      	<div class="twelve columns">
+      		<hr>
+      	</div>
       </div>
 
       <div class="row">
-        <div class="four columns" style="margin-top:5%; min-width:300px">
-          <h5>Select a Category</h5>
-          <select input class="u-full-width" onchange="location =this.value;">
-            <option value="categories.php">All Categories</option>
-            <option value="indoor-categories.php">Indoor</option>
-            <option value="outdoor-categories.php">Outdoor</option>
-            <option value="build-repair-categories.php">Build/Repair</option>
-            <option value="food-delivery-categories.php">Food/Deliveries</option>
-          </select>
-        </div>
-      </div>
+        <div class="twelve columns" style="margin-top:5%; text-align:center">
+
+         <h5> Is the following information correct? </h5>
+
+		<h6> <?php echo "Email: " . $_SESSION['email']. "<br>"; ?> </h6>         
+		<h6> <?php echo "First Name: " . $_SESSION['firstName']. "<br>"; ?> </h6>         
+		<h6> <?php echo "Last Name: " . $_SESSION['lastName']. "<br>"; ?> </h6>     
+
+        <form method="POST" action="registration_form.php">
+		      <input type="submit" value="Confirm">
+        </form>
+        <form method="POST" action="register.php">
+		      <input type="submit" value="Edit">
+        </form>
+		      <br><br>
+    
 
 
-      </script>
-
-      <div class="row">
-        <div class="twelve columns" style="margin-top:5%">
-
-          <?php
-            include 'includes/card.inc.php';
-          ?>
-
-          <br>
         </div>   
       </div>
 
-      </div>
+</div> 
 
 </body>
 </html>

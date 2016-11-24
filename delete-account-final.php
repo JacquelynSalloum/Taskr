@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +9,7 @@
   <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
-  <title>CSCI3172 - Assignment</title>
+  <title>CSCI3172 - Lab 3</title>
   <meta name="description" content="">
   <meta name="author" content="">
 
@@ -39,12 +43,28 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 <div class="container">
 
-      <div class="row">
-        <div class="twelve columns" style="margin-top:5%; text-align:center">
-          <h4>Your account has been created!</h4>
-        </div>   
+  <?php
+    include 'includes/header-logged.inc.php';
+  ?> 
+
+    <div class="row">
+      <div class="twelve columns" style="margin-top:5%">
+     
+
+        <h4>Please verify your password.</h4>
+
+        <?php
+
+          include 'includes/delete-form.inc.php';
+
+          ?>
+          
       </div>
+    </div>
 
 </div> 
+<?php
+  include 'includes/footer.inc.php';
+?>
 </body>
 </html>

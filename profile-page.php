@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +9,7 @@
   <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
-  <title>CSCI3172 - Project</title>
+  <title>CSCI3172 - Lab 3</title>
   <meta name="description" content="">
   <meta name="author" content="">
 
@@ -55,66 +59,27 @@
             <img src="images/add.png" style="height:20px"> Add photo <br><br>
           </div> 
           
-          <div class="four columns" >
-            Username<br><br>
-            E-mail<br><br>
-            <input class="button-primary" type="submit" value="Change Password">
-          </div> 
-
-          <div class="four columns">
-
+          <div class="eight columns" >
+            <?php
+            echo "First name: " . $_SESSION['firstName'] . "<br>";
+            echo "Last name: " . $_SESSION['lastName'] . "<br>";
+            echo "Email: " . $_SESSION['email'] . "<br><br>" ;
+            ?>
+            <form action="change_password.php">
+              <input type="submit" value="Change Password">
+            </form>
+            <form action="update_info.php">
+              <input type="submit" value="Update Account">
+            </form>
+            <form action="delete-account.php">
+              <input type="submit" value="Delete Account">
+            </form>
           </div> 
 
       </div>  
 
-      <div class="row">
-        <div class="twelve columns">
-          <br>
-          Location
-          <br><br>
-        </div>  
-      </div>  
 
-      <div class="row">
-        <div class="twelve columns">
-          Payment Methods
-        </div>  
-      </div> 
+  </div>
 
-      <div class="row">
-        <div class="four columns" style="margin-top:5%; min-width:300px; float:r">
-          <h5>Tasks</h5>
-          <select input class="u-full-width">
-            <option value="all-categories">All Categories</option>
-            <option value="indoor">Active</option>
-            <option value="outdoor">Complete</option>
-          </select>
-          <br>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="twelve columns">
-          <?php
-            include 'includes/card.inc.php';
-          ?>
-          <br>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="twelve columns">
-          <?php
-            include 'includes/card.inc.php';
-          ?>
-          <br>
-        </div>
-      </div>
-
-      </div>
-
-        <?php
-          include 'includes/footer.inc.php';
-        ?>
 </body>
 </html>

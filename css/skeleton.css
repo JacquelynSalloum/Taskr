@@ -35,6 +35,7 @@
   margin: 0 auto;
   padding: 0 20px;
   box-sizing: border-box; }
+
 .column,
 .columns {
   width: 100%;
@@ -222,6 +223,7 @@ input[type="button"].button-primary:focus {
   color: #FFF;
   background-color: #325E38;
   border-color: #325E38; }
+
 
 
 /* Forms

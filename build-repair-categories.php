@@ -1,3 +1,9 @@
+<?php
+
+session_start();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,7 +34,7 @@
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="icon" type="image/png" href="images/user.png">
 
 </head>
 
@@ -39,12 +45,47 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 <div class="container">
 
-      <div class="row">
-        <div class="twelve columns" style="margin-top:5%; text-align:center">
-          <h4>Welcome back!</h4>
+      <?php
+        include 'includes/header-logged.inc.php';
+      ?>  
+
+     <div class="row">
+        <div class="twelve columns" style="margin-top:5%">
+          <hr>
         </div>   
       </div>
 
-</div> 
+      <div class="row">
+        <div class="four columns" style="margin-top:5%; min-width:300px">
+          <h5>Select a Category</h5>
+          <select input class="u-full-width" onchange="location =this.value;">
+            <option value="categories.php">All Categories</option>
+            <option value="indoor-categories.php">Indoor</option>
+            <option value="outdoor-categories.php">Outdoor</option>
+            <option value="build-repair-categories.php">Build/Repair</option>
+            <option value="food-delivery-categories.php">Food/Deliveries</option>
+          </select>
+        </div>
+      </div>
+
+
+      </script>
+
+      <div class="row">
+        <div class="twelve columns" style="margin-top:5%">
+
+          <?php
+            include 'includes/buildcard.inc.php';
+          ?>
+
+          <br>
+        </div>   
+      </div>
+
+      </div>
+
+      <?php
+        include 'includes/footer.inc.php';
+      ?>
 </body>
 </html>

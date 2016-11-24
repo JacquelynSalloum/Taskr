@@ -1,6 +1,6 @@
 <?php
 
-session_start()
+session_start();
 
 ?>
 
@@ -75,7 +75,7 @@ session_start()
         <div class="twelve columns" style="margin-top:5%">
 
           <?php
-            include 'includes/card.inc.php';
+            include 'includes/indoor-card.inc.php';
           ?>
 
           <br>
@@ -83,6 +83,7 @@ session_start()
       </div>
 
       </div>
+
 
 </body>
 </html>
