@@ -20,10 +20,10 @@
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   
-  <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/skeleton.css">
   <link rel="stylesheet" href="css/styles.css">
 
+  <link rel="stylesheet" href="css/normalize.css">
 
 
   <!-- Favicon
@@ -38,13 +38,12 @@
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 <div class="container">
-
   <?php
     include 'includes/header.inc.php';
   ?> 
 
     <div class="row">
-      <div class="twelve columns" style="margin-top:5%">
+      <div class="twelve columns">
      
 
         <h5>Register for an account!</h5> 
@@ -57,8 +56,10 @@
     </div>
 
 </div> 
-       <?php
+
+      <?php
         include 'includes/footer.inc.php';
-      ?>
-</body>
+       ?>
+</body>       
+
 </html>

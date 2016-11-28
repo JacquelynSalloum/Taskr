@@ -1,3 +1,8 @@
+<?php
+
+session_start();
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -34,20 +39,24 @@
 </head>
 
 <body>
-
-
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-<div class="container">
+
+  <div class="container">
+
+  <?php
+    include 'includes/header-logged.inc.php';
+  ?>
 
       <div class="row">
         <div class="twelve columns" style="margin-top:5%; text-align:center">
-          <h4>Your account has been created!</h4>
-
+         <h5> <?php echo "Welcome back " . $_SESSION['firstName']. "!<br>"; ?> </h5>
         </div>   
       </div>
 
-</div> 
+
+  </div> 
+
 <?php
   include 'includes/footer.inc.php';
 ?>

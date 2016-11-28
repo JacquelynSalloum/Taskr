@@ -1,41 +1,36 @@
 <?php
+session_start();
 
-$userName = $_POST['userName'];
-$firstName = $_POST['firstName'];
-$lastName = $_POST['lastName'];
-$email = $_POST['email'];
-$password = $_POST['password'];
+include_once 'login.php';
+include 'db_connect.php';
 
-try
-{
-	$pdo = new PDO('mysql:host=db.cs.dal.ca;dbname=syoung', 'syoung', 'B00727194');
-	$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-	$pdo->exec('SET NAMES "utf8"');
-}
+$email = $_SESSION['email'];
 
-catch(PDOException $e)
-{
-	$output = 'Unable to connect to the database server.'. $e->getMessage();
-	include 'output.html.php';
+$firstName = $_SESSION['firstName'];
+$lastName = $_SESSION['lastName'];
+$password = $_SESSION['password'];
 
-	exit();
-}
 
 try{
-	$stmt = $pdo->prepare("INSERT INTO user (userName, firstName, lastName, email, password) 
-		VALUES (:userName, :firstName, :lastName, :email, :password)");
-	$stmt->bindParam(':userName', $userName);
+	$stmt = $pdo->prepare("INSERT INTO user (email, firstName, lastName, password) 
+		VALUES (:email, :firstName, :lastName, :password)");
+	
+	$stmt->bindParam(':email', $email);
 	$stmt->bindParam(':firstName', $firstName);
 	$stmt->bindParam(':lastName', $lastName);
-	$stmt->bindParam(':email', $email);
 	$stmt->bindParam(':password', $password);
 	$stmt->execute();
+
+	$_SESSION['loggedin'] = true;
+
 	include 'includes/welcome.inc.php';
+	
 }
 catch(PDOException $e)
 {
+
 	include 'includes/error.inc.php';
+	
 }
 
 ?>
-

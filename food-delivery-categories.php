@@ -1,6 +1,6 @@
 <?php
 
-session_start()
+session_start();
 
 ?>
 
@@ -75,7 +75,7 @@ session_start()
         <div class="twelve columns" style="margin-top:5%">
 
           <?php
-            include 'includes/card.inc.php';
+            include 'includes/buildcard.inc.php';
           ?>
 
           <br>

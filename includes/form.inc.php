@@ -1,4 +1,11 @@
-<form id="registration_form" action="registration_form.php" method="post" onsubmit="return checkForm(this);">
+<form id="registration_form" action="confirm.php" method="post" onsubmit="return checkForm(this);">
+      <div class="row">
+        <div class="six columns">
+          <label for="exampleEmailInput">Email</label>
+          <input class="u-full-width" type="email" placeholder="test@mailbox.com" name="email" id="email">
+        </div>
+      </div>      
+
       <div class="row">
         <div class="six columns">
           <label for="exampleEmailInput">First name</label>
@@ -9,19 +16,14 @@
           <input class="u-full-width" type="text" placeholder="Last name..." name="lastName"id="lastName">
         </div>
       </div>
-        <div class="row">
+
+      <div class="row">
         <div class="six columns">
-          <label for="exampleEmailInput">Username</label>
-          <input class="u-full-width" type="text" placeholder="Username..." name="userName" id="userName">
+          <label for="exampleEmailInput">Birthday</label>
+          <input class="u-full-width" type="date" name="birthday" id="birthday">
         </div>
       </div>
 
-        <div class="row">
-        <div class="six columns">
-          <label for="exampleEmailInput">Email</label>
-          <input class="u-full-width" type="email" placeholder="test@mailbox.com" name="email" id="email">
-        </div>
-      </div>
       <div class="row">
         <div class="six columns">
           <label for="exampleEmailInput">Password</label>
@@ -39,17 +41,6 @@
 <script type="text/javascript">
   function checkForm(form)
   {
-    if(form.userName.value == "") {
-      alert("Error: userName cannot be blank!");
-      form.userName.focus();
-      return false;
-    }
-    re = /^\w+$/;
-    if(!re.test(form.userName.value)) {
-      alert("Error: userName must contain only letters, numbers and underscores!");
-      form.userName.focus();
-      return false;
-    }
 
     if(form.password.value != "" && form.password.value == form.confirmPassword.value) {
       if(form.password.value.length < 6) {

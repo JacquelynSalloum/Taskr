@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,12 +43,28 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 <div class="container">
 
-      <div class="row">
-        <div class="twelve columns" style="margin-top:5%; text-align:center">
-          <h4>Welcome back!</h4>
-        </div>   
+  <?php
+    include 'includes/header-logged.inc.php';
+  ?> 
+
+    <div class="row">
+      <div class="twelve columns" style="margin-top:5%">
+     
+
+        <h5>Change Your Info</h5> 
+
+          <?php
+            include 'includes/update-form.inc.php';
+          ?>
+         <form action="profile-page.php">
+          <input type="submit" value="Go Back">
+        </form>
       </div>
+    </div>
 
 </div> 
+<?php
+  include 'includes/footer.inc.php';
+?>
 </body>
 </html>

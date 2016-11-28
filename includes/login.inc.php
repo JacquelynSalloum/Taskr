@@ -3,8 +3,8 @@
       <form id="login_form" action="login_form.php" method="post">
 
         <div class="four columns">
-          <label for="exampleEmailInput">Username</label>
-          <input class="u-full-width" type="text" placeholder="Username..." name="userName" id="userName">
+          <label for="exampleEmailInput">Email</label>
+          <input class="u-full-width" type="text" placeholder="Email..." name="email" id="email">
         </div>
 
         <div class="four columns"> 

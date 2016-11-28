@@ -8,8 +8,8 @@
         <nav>
           <ul>
             <li><a href="index.php">Home</a></li>
-            <li><a href="https://web.cs.dal.ca/~syoung/csci3172/lab1/">Lab 1</a></li>
-            <li><a href="https://web.cs.dal.ca/~syoung/csci3172/lab2/">Lab 2</a></li>
+            <li><a href="verify-session.php">My Account</a></li>
+            <li><a href="categories.php">Tasks</a></li>
           </ul>
         </nav>
        </div>
@@ -21,4 +21,9 @@
                      ?> 
         </div>
       </div> 
+      <div class="row">
+        <div class="twelve columns">
+          <hr>
+        </div>
+      </div>
      </div> 

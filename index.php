@@ -5,7 +5,7 @@
   <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
-  <title>CSCI3172 - Lab 3</title>
+  <title>CSCI3172 - Lab 5</title>
   <meta name="description" content="">
   <meta name="author" content="">
 
@@ -42,6 +42,7 @@
       <?php
         include 'includes/header.inc.php';
       ?>  
+      
       <div class="row">
         <div class="twelve columns" style="margin-top:5%; text-align:center">
           <h4>Get Stuff Done.</h4>

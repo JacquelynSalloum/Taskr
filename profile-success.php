@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +9,7 @@
   <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
-  <title>CSCI3172 - Assignment</title>
+  <title>CSCI3172 - Lab 3</title>
   <meta name="description" content="">
   <meta name="author" content="">
 
@@ -44,64 +48,41 @@
 
       <div class="row">
           <div class="twelve columns" style="margin-top:5%">
+
+            <h4>Your account has been updated.</h4>
+
             <hr>
           </div>   
       </div>
 
       <div class="row">
 
-          <div class="six columns" style="text-align:center">
-            <h4> Title </h4>
-            <img src="images/default-image.png" style="height:250px"><br>
-          </div> 
-          
-          <div class="six columns"><br><br><br>
-            <h5>Category</h5>
-            <h5>Location</h5>
-            <h5>Deadline</h5>
-          </div> 
-
- 
-
-      </div>  
-
-      <div class="row">
-        <div class="twelve columns">
-          <br>
-            Description
-            <textarea input class="u-full-width">
-            </textarea>
-        </div>  
-      </div>  
-
- <div class="row">
 
           <div class="four columns">
             <img src="images/profile-picture.jpg" style="height:150px"><br>
+            <img src="images/add.png" style="height:20px"> Add photo <br><br>
           </div> 
           
-          <div class="four columns" >
-            Username<br><br>
-            E-mail<br><br>
-            Rating<br><br>
-          </div> 
+          <div class="eight columns" >
+            <?php
+            echo "First name: " . $_SESSION['firstName'] . "<br>";
+            echo "Last name: " . $_SESSION['lastName'] . "<br>";
+            echo "Email: " . $_SESSION['email'] . "<br><br>" ;
+            ?>
+            <form action="change_password.php">
+              <input type="submit" value="Change Password">
+            </form>
+            <form action="update_info.php">
+              <input type="submit" value="Update Account">
+            </form>
+           <input type="submit" value="Delete Account">
 
-          <div class="four columns">
           </div> 
 
       </div>  
 
-      <div class="row" style="text-align:center">
 
-            <input class="button-primary" type="submit" value="I can do this!">
-            <input class="button-primary" type="submit" value="Go back">
-         
-      </div>  
+  </div>
 
-      </div>
-
-        <?php
-          include 'includes/footer.inc.php';
-        ?>
 </body>
-</html>i
+</html>
