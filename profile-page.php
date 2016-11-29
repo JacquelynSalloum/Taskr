@@ -43,7 +43,7 @@ session_start();
   <div class="container">
 
         <?php
-          include 'includes/header-logged.inc.php';
+          include 'includes/header.inc.php';
         ?>  
 
       <div class="row">
@@ -80,10 +80,6 @@ session_start();
           <option value="profile-page-tasks.php">Your Tasks</option>
           <option value="profile-page-accepted-tasks.php">Current Tasks</option>
         </select>
-
-        <?php
-          include 'includes/usercard.inc.php';
-        ?>
 
           </div> 
       </div>  

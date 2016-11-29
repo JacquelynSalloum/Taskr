@@ -2,7 +2,7 @@
 /* Card that displays all tasks in the indoor category */
 
 echo "<table style='textalign:center; padding:20px'>";
-echo "<tr><th>Title</th><th>Description</th><th>Price</th></tr>";
+echo "<tr><th>ID</th><th>Title</th><th>Description</th><th>Price</th></tr>";
 
 class TableRows extends RecursiveIteratorIterator { 
     function __construct($it) { 
@@ -30,7 +30,7 @@ $dbname = "macdona5";
 try {
     $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $stmt = $conn->prepare("SELECT title, content, price FROM task WHERE category = 'outdoor'"); 
+    $stmt = $conn->prepare("SELECT taskID, title, content, price FROM task WHERE category = 'outdoor'"); 
     $stmt->execute();
 
     // set the resulting array to associative

@@ -49,7 +49,7 @@ $_SESSION['posterID']='sarahedenyoung@gmail.com';
 <div class="container">
 
     <?php
-    include 'includes/header-logged.inc.php';
+    include 'includes/header.inc.php';
      ?>
 
       <div class="row">
