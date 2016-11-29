@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-include_once 'login.php';
+require_once("login.php");
 include 'db_connect.php';
 
 $email = $_SESSION['email'];

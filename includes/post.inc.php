@@ -1,5 +1,5 @@
-<form id="task_form" action="task_form.php" method="post" onsubmit="return checkForm(this);">
-      
+<form enctype="multipart/form-data" id="task_form" action="task_form.php" method="post" onsubmit="return checkForm(this);">
+    
       <div class="row">
         <div class="ten columns">
           <label for="exampleEmailInput">Title</label>
@@ -7,7 +7,14 @@
         </div>
       </div>
 
-
+      <div class="row">
+        <div class="ten columns">
+          <label for="exampleEmailInput">Image (optional) </label>
+          <input type="file" name="fileName" /><br />
+          <input type="hidden" name="MAX_FILE_SIZE" value="10000" />
+        </div>
+      </div>
+    
       <div class="row">
         <div class="ten columns">
           <label>Category</label>

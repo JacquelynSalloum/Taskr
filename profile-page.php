@@ -55,8 +55,9 @@ session_start();
       <div class="row">
 
           <div class="four columns">
-            <img src="images/profile-picture.jpg" style="height:150px"><br>
-            <img src="images/add.png" style="height:20px"> Add photo <br><br>
+            <!--<img src="images/profile-picture.jpg" style="height:150px"><br>-->
+            <?php include 'includes/retrieve-user-image.inc.php' ?>
+            <a href="user-change-image.php"> <img  src="images/add.png" style="height:20px" alt="change"></a>Change photo <br><br>
           </div> 
           
           <div class="eight columns" >

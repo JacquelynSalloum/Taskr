@@ -47,7 +47,7 @@
         </div>   
         <div class="row">
           <div class="twelve columns" style="margin-top:5%; margin-left:42%; margin-right:4%">
-              <a href="register.php"><input class="button-primary" type="button" value="Go Back"></a>
+              <a href="javascript:history.back()"><input class="button-primary" type="button" value="Go Back"></a>
           </div>   
       </div>
       </div>

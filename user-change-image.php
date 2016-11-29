@@ -9,7 +9,7 @@ session_start();
   <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
-  <title>CSCI3172 - Project</title>
+  <title>CSCI3172 - Lab 3</title>
   <meta name="description" content="">
   <meta name="author" content="">
 
@@ -32,7 +32,7 @@ session_start();
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="image/png" href="images/user.png">
+  <link rel="icon" type="image/png" href="images/logo.png">
 
 </head>
 
@@ -43,25 +43,28 @@ session_start();
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 <div class="container">
 
-      <?php
-        include 'includes/header-logged.inc.php';
-      ?>  
+  <?php
+    include 'includes/header-logged.inc.php';
+  ?> 
 
-      <div class="row">
-        <div class="six columns">
-          <br>
-          <h5> Post a Task </h5>
+    <div class="row">
+      <div class="twelve columns" style="margin-top:5%">
+     
+
+        <h5>Change Your Info</h5> 
+
           <?php
-            include 'includes/post.inc.php';
+            include 'includes/update-image.inc.php';
           ?>
-
-        </div>
-      </div>  
-
+         <form action="profile-page.php">
+          <input type="submit" value="Go Back">
+        </form>
       </div>
+    </div>
 
-      <?php
-        include 'includes/footer.inc.php';
-      ?>
+</div> 
+<?php
+  include 'includes/footer.inc.php';
+?>
 </body>
 </html>
