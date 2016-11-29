@@ -1,9 +1,10 @@
 <?php
-
 session_start();
 
-?>
+$_SESSION['taskID']="2";
+$_SESSION['posterID']='sarahedenyoung@gmail.com';
 
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,36 +30,43 @@ session_start();
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/skeleton.css">
   <link rel="stylesheet" href="css/styles.css">
-
+ <link rel="stylesheet" href="css/star-style.css">
 
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="icon" type="image/png" href="images/logo.png">
 
+
 </head>
 
 <body>
+
+
+
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<div class="container">
 
-  <div class="container">
-
-  <?php
+    <?php
     include 'includes/header-logged.inc.php';
-  ?>
+     ?>
 
       <div class="row">
-        <div class="twelve columns" style="margin-top:5%; text-align:center">
-         <h5> <?php echo "Welcome back " . $_SESSION['firstName']. "!<br>"; ?> </h5>
-        </div>   
+
+        <div class="twelve columns">
+
+          <?php
+            include 'includes/rating-form.inc.php';
+          ?>
+
+        </div>
+
       </div>
 
-
-  </div> 
-
-<?php
-  include 'includes/footer.inc.php';
-?>
+</div> 
+  <?php
+    include 'includes/footer.inc.php';
+  ?>
 </body>
 </html>

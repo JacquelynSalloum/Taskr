@@ -80,23 +80,20 @@ session_start();
           <option value="profile-page-tasks.php">Your Tasks</option>
           <option value="profile-page-accepted-tasks.php">Current Tasks</option>
         </select>
-
         <?php
-          include 'includes/usercard.inc.php';
+          include 'includes/acceptercard.inc.php';
         ?>
-
           </div> 
       </div>  
-
-
 
       <div class="footer-push">
       <br></div>
       </div>
 
+
       <?php 
         include 'includes/footer.inc.php';
       ?>
 
-</body>
-</html>
+    </body>
+    </html>

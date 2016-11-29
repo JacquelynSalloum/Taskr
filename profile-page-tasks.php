@@ -80,11 +80,9 @@ session_start();
           <option value="profile-page-tasks.php">Your Tasks</option>
           <option value="profile-page-accepted-tasks.php">Current Tasks</option>
         </select>
-
         <?php
           include 'includes/usercard.inc.php';
         ?>
-
           </div> 
       </div>  
 
@@ -97,6 +95,3 @@ session_start();
       <?php 
         include 'includes/footer.inc.php';
       ?>
-
-</body>
-</html>
