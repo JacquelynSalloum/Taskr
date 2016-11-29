@@ -1,8 +1,3 @@
-<?php
-
-session_start();
-
-?>
 
   <div class="header">  
     <div class="row">
@@ -21,23 +16,20 @@ session_start();
        </div>
  
 
-       <div class="three columns" style="margin-left:0px; margin-top:7%; text-align:center; float:right">
+       <div class="three columns" style="margin-left:0px; margin-top:3%; text-align:center; float:right">
         <div class = "row">
           <div class = "twelve columns">
-           <a href="profile-page.php"> <img class="user-icon" src="images/user.png" alt="user" style="width:45px;height:45px"></a><br>
-           My Account
-        </div>
-      </div>        
-      <div class="row">
-            <div class="twelve columns">
-
             <?php
               include 'includes/logout.inc.php';
-            ?>
-          </div>
-        </div>
-
-
+            ?>       
+        </div> 
       </div> 
-     </div> 
-    
+      </div>
+   
+    <div class = "row">
+          <div class = "twelve columns">
+            <hr>            
+        </div>
+      </div>
+    </div>
+  </div>

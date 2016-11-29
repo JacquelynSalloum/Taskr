@@ -50,15 +50,16 @@ session_start();
 
       <div class="row">
         <div class="twelve columns" style="margin-top:5%; text-align:center">
-         <h5> <?php echo "Welcome back " . $_SESSION['firstName']. "!<br>"; ?> </h5>
+         <h5> <?php echo "Welcome back " . $_SESSION['firstName']. "!<br>"; ?> </h5><br>
+         <form action="categories.php">
+          <input type="submit" value="View Tasks">
+         </form>
         </div>   
       </div>
 
 
   </div> 
 
-<?php
-  include 'includes/footer.inc.php';
-?>
+
 </body>
 </html>

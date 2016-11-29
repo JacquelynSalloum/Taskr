@@ -49,11 +49,6 @@ session_start();
         include 'includes/header-logged.inc.php';
       ?>  
 
-     <div class="row">
-        <div class="twelve columns" style="margin-top:5%">
-          <hr>
-        </div>   
-      </div>
 
       <div class="row">
         <div class="four columns" style="margin-top:5%; min-width:300px">
@@ -81,8 +76,13 @@ session_start();
           <br>
         </div>   
       </div>
-
+      <div class="footer-push">
+      <br></div>
       </div>
+
+      <?php 
+        include 'includes/footer.inc.php';
+      ?>
 
 </body>
 </html>

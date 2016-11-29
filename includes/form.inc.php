@@ -19,13 +19,6 @@
 
       <div class="row">
         <div class="six columns">
-          <label for="exampleEmailInput">Birthday</label>
-          <input class="u-full-width" type="date" name="birthday" id="birthday">
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="six columns">
           <label for="exampleEmailInput">Password</label>
           <input class="u-full-width" type="password" placeholder="Must contain at least one number..." name="password" id="password">
         </div>
@@ -33,7 +26,7 @@
           <label for="exampleEmailInput">Confirm password</label>
           <input class="u-full-width" type="password" placeholder="Confirm..." name="confirmPassword" id="confirmPassword">
         </div>
-      </div>
+      </div><br><br>
       <input class="button-primary" type="submit" value="Register">
 </form>
 
