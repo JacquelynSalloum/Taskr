@@ -1,4 +1,3 @@
-<form id="confirm-delete" action="confirm-delete.php" method="post" onsubmit="return checkForm(this);">
 
   <div class="row">
     <div class="six columns">
