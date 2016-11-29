@@ -43,18 +43,30 @@ session_start()
 
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-<div class="container">
+  <div class="container">
 
-      <?php
-        include 'includes/header-logged.inc.php';
-      ?>  
+    <?php
+    include 'includes/header-logged.inc.php';
+    ?>  
 
-     <div class="row">
-        <div class="twelve columns" style="margin-top:5%">
-          <hr>
-        </div>   
+
+    <div class="row">
+      <div class="four columns" style="margin-top:5%; min-width:300px">
+        <h5>Select a Category</h5>
+        <select input class="u-full-width" onchange="location =this.value;">
+          <option value="categories.php">All Categories</option>
+          <option value="indoor-categories.php">Indoor</option>
+          <option value="outdoor-categories.php">Outdoor</option>
+          <option value="build-repair-categories.php">Build/Repair</option>
+          <option value="food-delivery-categories.php">Food/Deliveries</option>
+        </select>
       </div>
+    </div>
 
+
+  </script>
+
+<<<<<<< HEAD
       <div class="row">
         <div class="four columns" style="margin-top:5%; min-width:300px">
           <h5>Select a Category</h5>
@@ -73,16 +85,24 @@ session_start()
 
       <div class="row">
         <div class="twelve columns" style="margin-top:5%">
+=======
+  <div class="row">
+    <div class="twelve columns" style="margin-top:5%">
 
-          <?php
-            include 'includes/card.inc.php';
-          ?>
+      <?php
+      include 'includes/card.inc.php';
+      ?>
+>>>>>>> Sarah
 
-          <br>
-        </div>   
-      </div>
+      <br>
+    </div>   
+  </div>
 
-      </div>
+</div>
+
+<?php 
+include 'includes/footer.inc.php';
+?>
 
 </body>
 </html>

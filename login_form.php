@@ -9,6 +9,7 @@ $password = hash_hmac('md5', $_POST['password'], $salt);
 
 try{
 
+<<<<<<< HEAD
 	$query = "SELECT * FROM user WHERE email= ? and password= ?";
 
 	$statement = $pdo->prepare($query);
@@ -16,6 +17,16 @@ try{
 	$count = $statement->execute(array($POST['email'], $password));
 
 	if($count == 1){
+=======
+	$sql = "SELECT * FROM user WHERE email= ? and password= ?";
+       
+       $result = $pdo->prepare($sql);
+       $result->execute(array($email, $password));
+       $fetch = $result->fetchAll();
+       $count = count($fetch);
+      
+       if($count == 1) {
+>>>>>>> Sarah
 
 		session_start();
 		$_SESSION['loggedin'] = true;
@@ -32,14 +43,22 @@ try{
 		$row = $stmt->fetch(PDO::FETCH_ASSOC);
 		$_SESSION['lastName']=$row['lastName'];
 
+<<<<<<< HEAD
 		
+=======
+>>>>>>> Sarah
 		echo "<script>window.location.href='return.php';</script>";
 
 		}
 
 	else {
+
 		echo "Verification not complete. Your username and password are invalid. Please try again.";
 		include 'kill-session.php';
+<<<<<<< HEAD
+=======
+		
+>>>>>>> Sarah
 	}
 }
 catch(PDOException $e)

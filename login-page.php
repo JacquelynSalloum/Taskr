@@ -55,8 +55,15 @@
 
       </div>
     </div>
+<<<<<<< HEAD:login-page.php
 
 </div> 
 
+=======
+
+
+  </div>
+
+>>>>>>> Sarah:login-page.php
 </body>
 </html>

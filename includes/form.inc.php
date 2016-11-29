@@ -17,6 +17,7 @@
         </div>
       </div>
 
+<<<<<<< HEAD
       <div class="row">
         <div class="six columns">
           <label for="exampleEmailInput">Birthday</label>
@@ -24,6 +25,8 @@
         </div>
       </div>
 
+=======
+>>>>>>> Sarah
       <div class="row">
         <div class="six columns">
           <label for="exampleEmailInput">Password</label>
@@ -33,7 +36,7 @@
           <label for="exampleEmailInput">Confirm password</label>
           <input class="u-full-width" type="password" placeholder="Confirm..." name="confirmPassword" id="confirmPassword">
         </div>
-      </div>
+      </div><br><br>
       <input class="button-primary" type="submit" value="Register">
 </form>
 

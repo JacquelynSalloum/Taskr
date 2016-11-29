@@ -1,8 +1,11 @@
+<<<<<<< HEAD
 <?php
 
 session_start();
 
 ?>
+=======
+>>>>>>> Sarah
 
   <div class="header">  
     <div class="row">
@@ -21,6 +24,7 @@ session_start();
        </div>
  
 
+<<<<<<< HEAD
        <div class="three columns" style="margin-left:0px; margin-top:7%; text-align:center; float:right">
         <div class = "row">
           <div class = "twelve columns">
@@ -38,6 +42,22 @@ session_start();
         </div>
 
 
+=======
+       <div class="three columns" style="margin-left:0px; margin-top:3%; text-align:center; float:right">
+        <div class = "row">
+          <div class = "twelve columns">
+            <?php
+              include 'includes/logout.inc.php';
+            ?>       
+        </div> 
+>>>>>>> Sarah
       </div> 
-     </div> 
-    
+      </div>
+   
+    <div class = "row">
+          <div class = "twelve columns">
+            <hr>            
+        </div>
+      </div>
+    </div>
+  </div>

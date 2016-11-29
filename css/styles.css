@@ -64,12 +64,22 @@ h4{
 
 }
 .footer ul li a{
+<<<<<<< HEAD
 float:center;
 color:white;
 padding: 0px;
+=======
+	color:white;
+	padding: 0px;
+}
+.content{
+	min-height: 100%;
+>>>>>>> Sarah
 }
 .content{
 	min-height: 100%;
 }
+
+
 
 

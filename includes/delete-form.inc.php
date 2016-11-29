@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 <form id="confirm-delete" action="confirm-delete.php" method="post" onsubmit="return checkForm(this);">
+=======
+>>>>>>> Sarah
 
   <div class="row">
     <div class="six columns">

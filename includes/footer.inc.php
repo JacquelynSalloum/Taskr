@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> Sarah
 <div class="footer">
           <div class="row">  
             <div class="four columns" style="margin-top: 10px">
