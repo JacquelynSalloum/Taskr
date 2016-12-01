@@ -33,6 +33,12 @@ try{
 		$row = $stmt->fetch(PDO::FETCH_ASSOC);
 		$_SESSION['lastName']=$row['lastName'];
 
+		$stmt = $pdo->prepare("SELECT AVG(rate) AS num FROM tbl_rating WHERE poster_id = '$email'");
+		$stmt->execute(array($email));
+		$row = $stmt->fetch(PDO::FETCH_ASSOC);
+		$_SESSION['user-rating']=$row['num'];
+		echo $_SESSION['user-rating'];
+
 		echo "<script>window.location.href='return.php';</script>";
 
 		}

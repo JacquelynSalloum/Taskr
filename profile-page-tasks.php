@@ -49,9 +49,8 @@ session_start();
       <div class="row">
 
           <div class="four columns">
-          <?php include 'includes/retrieve-user-image.inc.php' ?><br>
-            <a href="user-change-image.php"> <img  src="images/add.png" style="height:20px" alt="change"></a>&nbsp;Change photo <br><br>
-            
+          <?php include 'includes/retrieve-user-image.inc.php' ?>
+            <a href="user-change-image.php"> <img  src="images/add.png" style="height:20px" alt="change"></a>Change photo <br><br>
             <?php
               echo "Your Rating: ";
               include 'includes/rating-test.inc.php';
@@ -70,8 +69,12 @@ session_start();
             echo "Email: " . $_SESSION['email'] . "<br><br>" ;
             ?>
 
-              <input href="change_password.php" type="submit" value="Change Password"><br>
-              <input href="update_info.php" type="submit" value="Update Account"><br><br>
+            <form action="change_password.php">
+              <input type="submit" value="Change Password">
+            </form>
+            <form action="update_info.php">
+              <input type="submit" value="Update Account">
+            </form>
 
         <h5>Tasks</h5>
         <select input class="u-full-width" onchange="location=this.value;">
@@ -79,11 +82,11 @@ session_start();
           <option value="profile-page-tasks.php">Your Tasks</option>
           <option value="profile-page-accepted-tasks.php">Current Tasks</option>
         </select>
-
+        <?php
+          include 'includes/usercard.inc.php';
+        ?>
           </div> 
       </div>  
-
-
 
       <div class="footer-push">
       <br></div>

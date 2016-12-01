@@ -45,21 +45,22 @@ session_start();
   <div class="container">
 
   <?php
-    include 'includes/header-logged.inc.php';
+    include 'includes/header.inc.php';
   ?>
 
       <div class="row">
         <div class="twelve columns" style="margin-top:5%; text-align:center">
-         <h5> <?php echo "Welcome back " . $_SESSION['firstName']. "!<br>"; ?> </h5><br>
-         <form action="categories.php">
-          <input type="submit" value="View Tasks">
-         </form>
+         <h5> <?php echo "Welcome back " . $_SESSION['firstName']. "!<br>"; ?> </h5>
+            <a href="post-task.php"><input class="button-primary" type="button" value="Post a Task"></a>
+  
         </div>   
       </div>
 
 
   </div> 
 
-
+<?php
+  include 'includes/footer.inc.php';
+?>
 </body>
 </html>
