@@ -73,9 +73,9 @@ session_start();
         <?php
           $taskImage =$_SESSION['task_image'];
           if ($taskImage == null){
-            echo "<div style='width:350px;height:150px;overflow:hidden'><img src='./images/task-picture.png' style='height:150px'><br></div>";
+            echo "<div style='width:300px;height:150px;overflow:hidden'><img src='./images/task-picture.png' style='height:150px'><br></div>";
         } else {
-            echo "<div style='width:350px;height:150px;overflow:hidden'><img src='.$taskImage' style='height:150px'><br></div><br>";
+            echo "<div style='width:300px;height:150px;overflow:hidden'><img src='.$taskImage' style='height:150px'><br></div><br>";
         }
         ?>
         </div>
@@ -96,8 +96,16 @@ session_start();
               echo "User's Rating: ";
                include 'includes/rating-task.inc.php'; ?>
               <br><br>
-
-            <a href="#"><input class="button-primary" type="button" value="I can do this!"></a>
+              <?php
+              if($_SESSION['task_status']=='open'){
+              echo '<form id="claim_task" action ="claim_task.php" method="post">
+              <input class="button-primary" type="submit" value="I can do this!">
+              </form>';
+              }
+              else{
+                echo '<h5>This task has already been claimed!</h5>';
+              }
+              ?>
             <a href="categories.php"><input type="button" value="Go back"></a>
 
         </div>
