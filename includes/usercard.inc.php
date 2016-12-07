@@ -6,39 +6,20 @@ $email = $_SESSION['email'];
 echo "<table style='textalign:center'>";
 echo "<tr><th>Title</th><th>Description</th><th>Price</th></tr>";
 
-class TableRows extends RecursiveIteratorIterator { 
-    function __construct($it) { 
-        parent::__construct($it, self::LEAVES_ONLY); 
-    }
-
-    function current() {
-        return "<td>" . parent::current(). "</td>";
-    }
-
-    function beginChildren() { 
-        echo "<tr>"; 
-    } 
-
-    function endChildren() { 
-        echo "</tr>" . "\n";
-    } 
-} 
-
-$servername = "localhost";
-$username = "root";
-$password = "Sey0u0650993";
-$dbname = "macdona5";
+require_once('login.php');
 
 try {
-    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+    $conn = new PDO("mysql:host=$db_hostname;dbname=$db_database", $db_username, $db_password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $stmt = $conn->prepare("SELECT title, content, price FROM task WHERE posterID = '$email'"); 
     $stmt->execute();
 
-    // set the resulting array to associative
-    $result = $stmt->setFetchMode(PDO::FETCH_ASSOC); 
-    foreach(new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k=>$v) { 
-        echo $v;
+    while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
+        echo "<tr>";
+        echo "<td>" . $row['title'] . "</td>";
+        echo "<td>" . $row['content'] . "</td>";
+        echo "<td>" . $row['price'] . "</td>";
+        echo "</tr>";
     }
 }
 catch(PDOException $e) {

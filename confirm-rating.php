@@ -8,7 +8,7 @@ include 'db_connect.php';
 $taskID = $_SESSION['taskID'];
 $email = $_SESSION['email'];
 $rate = $_POST['rating'];
-$posterID = $_SESSION['posterID'];
+$posterID = $_SESSION['task_poster'];
 
 
 if(isset($_POST['rating']) && !empty($_POST['rating'])){
@@ -20,9 +20,7 @@ if(isset($_POST['rating']) && !empty($_POST['rating'])){
 
 		if($stmt->rowCount()>=1){
 		echo "You've already rated this task";
-		$_SESSION['taskID']="";
-		$_SESSION['posterID']="";
-		include 'profile-page.php';
+		include 'task-page.php';
 
 		}
 
@@ -35,25 +33,12 @@ if(isset($_POST['rating']) && !empty($_POST['rating'])){
 			$stmt->bindParam(':task_id', $taskID);
 			$stmt->bindParam(':poster_id', $posterID);
 			$stmt->execute();
-
-			$_SESSION['taskID']="";
-			$_SESSION['posterID']="";
-
+			include 'task-page.php';
 				
 		}
 
 
 }
 
-	// try{
-
-
-	// }
-
-	// catch(PDOException $e){
-	// 	include 'includes/error.inc.php';
-	// }
-
-// }
 
 ?>

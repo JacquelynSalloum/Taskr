@@ -54,6 +54,7 @@ session_start();
         <div class="four columns" style="margin-top:5%; min-width:300px">
           <h5>Select a Category</h5>
           <select input class="u-full-width" onchange="location =this.value;">
+              <option value="">Select...</option>
             <option value="categories.php">All Categories</option>
             <option value="indoor-categories.php">Indoor</option>
             <option value="outdoor-categories.php">Outdoor</option>
