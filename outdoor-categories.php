@@ -62,6 +62,14 @@ session_start();
             <option value="food-delivery-categories.php">Food/Deliveries</option>
           </select>
         </div>
+            <?php 
+                if($_SESSION['loggedin']==true){
+                    echo '<div class="four columns" style="margin-top:5%; min-width:300px">';
+                    echo "<h5>Need something done?</h5>";
+                    echo '<a href="post-task.php"><input class="button-primary" type="button" value="Post a Task"></a>';
+                    echo '</div>';
+            }
+          ?>
       </div>
 
 

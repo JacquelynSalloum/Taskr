@@ -51,17 +51,25 @@ session_start()
 
 
     <div class="row">
-      <div class="four columns" style="margin-top:5%; min-width:300px">
-        <h5>Select a Category</h5>
-        <select input class="u-full-width" onchange="location =this.value;">
-            <option value="">Select...</option>
-          <option value="categories.php">All Categories</option>
-          <option value="indoor-categories.php">Indoor</option>
-          <option value="outdoor-categories.php">Outdoor</option>
-          <option value="build-repair-categories.php">Build/Repair</option>
-          <option value="food-delivery-categories.php">Food/Deliveries</option>
-        </select>
-      </div>
+        <div class="four columns" style="margin-top:5%; min-width:300px">
+            <h5>Select a Category</h5>
+            <select input class="u-full-width" onchange="location =this.value;">
+                <option value="">Select...</option>
+              <option value="categories.php">All Categories</option>
+              <option value="indoor-categories.php">Indoor</option>
+              <option value="outdoor-categories.php">Outdoor</option>
+              <option value="build-repair-categories.php">Build/Repair</option>
+              <option value="food-delivery-categories.php">Food/Deliveries</option>
+            </select>
+        </div>
+        <?php 
+            if($_SESSION['loggedin']==true){
+                echo '<div class="four columns" style="margin-top:5%; min-width:300px">';
+                echo "<h5>Need something done?</h5>";
+                echo '<a href="post-task.php"><input class="button-primary" type="button" value="Post a Task"></a>';
+                echo '</div>';
+            }
+        ?> 
     </div>
 
 
@@ -69,7 +77,7 @@ session_start()
 
   <div class="row">
     <div class="twelve columns" style="margin-top:5%">
-
+        
       <?php
       include 'includes/card.inc.php';
       ?>
