@@ -69,12 +69,8 @@ session_start();
             echo "Email: " . $_SESSION['email'] . "<br><br>" ;
             ?>
 
-            <form action="change_password.php">
-              <input type="submit" value="Change Password">
-            </form>
-            <form action="update_info.php">
-              <input type="submit" value="Update Account">
-            </form>
+            <a href="change_password.php"><input class="button-primary" type="button" value="Change Password"></a><br>
+            <a href="update_info.php"><input class="button-primary" type="button" value="Update Profile"></a>
 
         <h5>Tasks</h5>
         <select input class="u-full-width" onchange="location=this.value;">

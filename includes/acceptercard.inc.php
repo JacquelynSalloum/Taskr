@@ -14,10 +14,12 @@ try {
     $stmt = $conn->prepare("SELECT title, content, price FROM task WHERE accepterID = '$email'"); 
     $stmt->execute();
 
-    // set the resulting array to associative
-    $result = $stmt->setFetchMode(PDO::FETCH_ASSOC); 
-    foreach(new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k=>$v) { 
-        echo $v;
+    while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
+        echo "<tr>";
+        echo "<td>" . $row['title'] . "</td>";
+        echo "<td>" . $row['content'] . "</td>";
+        echo "<td>" . $row['price'] . "</td>";
+        echo "</tr>";
     }
 }
 catch(PDOException $e) {

@@ -5,6 +5,7 @@ include_once 'login.php';
 include 'db_connect.php';
 
 $taskID = $_POST['taskID'];
+$_SESSION['taskID'] = $taskID;
 try{
 
 	$sql = "SELECT * FROM task WHERE taskID= '$taskID'";
