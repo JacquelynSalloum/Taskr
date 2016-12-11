@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
-		<title>Script Output</title>
+		<title>Taskr</title>
 	</head>
 	<body>
 		<!-- contents of output.html.php -->

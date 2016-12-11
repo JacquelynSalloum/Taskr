@@ -9,7 +9,7 @@ session_start();
   <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
-  <title>CSCI3172 - Project</title>
+  <title>Taskr</title>
   <meta name="description" content="">
   <meta name="author" content="">
 
@@ -44,7 +44,7 @@ session_start();
 <div class="container">
 
       <?php
-        include 'includes/header-logged.inc.php';
+        include 'includes/header.inc.php';
       ?>  
 
       <div class="row">

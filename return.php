@@ -11,7 +11,7 @@ session_start();
   <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
-  <title>CSCI3172 - Lab 3</title>
+  <title>Taskr</title>
   <meta name="description" content="">
   <meta name="author" content="">
 
@@ -45,31 +45,22 @@ session_start();
   <div class="container">
 
   <?php
-    include 'includes/header-logged.inc.php';
+    include 'includes/header.inc.php';
   ?>
 
       <div class="row">
         <div class="twelve columns" style="margin-top:5%; text-align:center">
-<<<<<<< HEAD:return.php
          <h5> <?php echo "Welcome back " . $_SESSION['firstName']. "!<br>"; ?> </h5>
-=======
-         <h5> <?php echo "Welcome back " . $_SESSION['firstName']. "!<br>"; ?> </h5><br>
-         <form action="categories.php">
-          <input type="submit" value="View Tasks">
-         </form>
->>>>>>> Sarah:return.php
+            <a href="post-task.php"><input class="button-primary" type="button" value="Post a Task"></a>
+  
         </div>   
       </div>
 
 
   </div> 
 
-<<<<<<< HEAD:return.php
 <?php
   include 'includes/footer.inc.php';
 ?>
-=======
-
->>>>>>> Sarah:return.php
 </body>
 </html>

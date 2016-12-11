@@ -11,7 +11,7 @@ session_start();
   <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
-  <title>CSCI3172 - Lab 3</title>
+  <title>Taskr</title>
   <meta name="description" content="">
   <meta name="author" content="">
 
@@ -46,22 +46,15 @@ session_start();
 <div class="container">
 
       <?php
-        include 'includes/header-logged.inc.php';
+        include 'includes/header.inc.php';
       ?>  
 
-<<<<<<< HEAD
-     <div class="row">
-        <div class="twelve columns" style="margin-top:5%">
-          <hr>
-        </div>   
-      </div>
-=======
->>>>>>> Sarah
 
       <div class="row">
         <div class="four columns" style="margin-top:5%; min-width:300px">
           <h5>Select a Category</h5>
           <select input class="u-full-width" onchange="location =this.value;">
+            <option value="">Select...</option>
             <option value="categories.php">All Categories</option>
             <option value="indoor-categories.php">Indoor</option>
             <option value="outdoor-categories.php">Outdoor</option>
@@ -69,6 +62,14 @@ session_start();
             <option value="food-delivery-categories.php">Food/Deliveries</option>
           </select>
         </div>
+            <?php 
+                if($_SESSION['loggedin']==true){
+                    echo '<div class="four columns" style="margin-top:5%; min-width:300px">';
+                    echo "<h5>Need something done?</h5>";
+                    echo '<a href="post-task.php"><input class="button-primary" type="button" value="Post a Task"></a>';
+                    echo '</div>';
+            }
+          ?>
       </div>
 
 
@@ -87,12 +88,9 @@ session_start();
 
       </div>
 
-<<<<<<< HEAD
-=======
       <?php 
         include 'includes/footer.inc.php';
       ?>
->>>>>>> Sarah
 
 </body>
 </html>

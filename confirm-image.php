@@ -29,6 +29,7 @@ if (!empty($_FILES["fileName"]["name"]) && !empty($_FILES["fileName"]["tmp_name"
         $newFileName = round(microtime(true)) . "_" . end($temp);
         $dir = $uploads_dir.$newFileName;
         move_uploaded_file($_FILES["fileName"]["tmp_name"], $dir);
+		chmod($dir, 0755);
         $imagepath = "/images/users/" . $newFileName;
 
         try

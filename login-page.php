@@ -5,7 +5,7 @@
   <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
-  <title>CSCI3172 - Lab 3</title>
+  <title>Taskr</title>
   <meta name="description" content="">
   <meta name="author" content="">
 
@@ -55,15 +55,9 @@
 
       </div>
     </div>
-<<<<<<< HEAD:login-page.php
-
-</div> 
-
-=======
 
 
   </div>
 
->>>>>>> Sarah:login-page.php
 </body>
 </html>

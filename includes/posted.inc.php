@@ -43,12 +43,20 @@ session_start();
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 <div class="container">
 
+     <?php
+    include 'includes/header.inc.php';
+     ?>
+    
+    
       <div class="row">
         <div class="twelve columns" style="margin-top:5%; text-align:center">
           <h4>Your task has been posted!</h4>
         </div>   
       </div>
 
-</div> 
+</div>
+<?php
+    include 'includes/footer.inc.php';
+  ?>
 </body>
 </html>

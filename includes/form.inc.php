@@ -17,16 +17,6 @@
         </div>
       </div>
 
-<<<<<<< HEAD
-      <div class="row">
-        <div class="six columns">
-          <label for="exampleEmailInput">Birthday</label>
-          <input class="u-full-width" type="date" name="birthday" id="birthday">
-        </div>
-      </div>
-
-=======
->>>>>>> Sarah
       <div class="row">
         <div class="six columns">
           <label for="exampleEmailInput">Password</label>

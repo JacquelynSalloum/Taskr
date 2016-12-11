@@ -1,11 +1,7 @@
 <?php
 session_start();
 
-<<<<<<< HEAD
-require_once("login.php");
-=======
 include_once 'login.php';
->>>>>>> Sarah
 include 'db_connect.php';
 
 $email = $_SESSION['email'];

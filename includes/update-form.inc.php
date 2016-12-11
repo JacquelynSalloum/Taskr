@@ -1,24 +1,5 @@
 <form id="update_form" action="confirm-update.php" method="post" onsubmit="return checkForm(this);">
 
-<<<<<<< HEAD
-      <div class="row">
-        <div class="six columns">
-<label for="exampleEmailInput">Password</label>
-          <input class="u-full-width" type="password" name="password" id="password">
-        </div>
-      </div>
-      <div class="row">
-        <div class="six columns">
-          <label for="exampleEmailInput">New First</label>
-          <input class="u-full-width" type="text" placeholder="First Name..." name="newFirst" id="newFirst">
-        </div>
-        <div class="six columns">
-          <label for="exampleEmailInput">New Last</label>
-          <input class="u-full-width" type="text" placeholder="Last Name..." name="newLast" id="newLast">
-        </div>
-      </div>
-      <input class="button-primary" type="submit" value="Update">
-=======
   <div class="row">
     <div class="six columns">
       <label for="exampleEmailInput">Password</label>
@@ -36,7 +17,6 @@
     </div>
   </div>
   <input class="button-primary" type="submit" value="Update">
->>>>>>> Sarah
 </form>
 
 <!--The following validator was taken from http://www.the-art-of-web.com/javascript/validate-password/ -->
