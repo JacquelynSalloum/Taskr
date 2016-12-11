@@ -9,7 +9,7 @@ session_start();
 
 
   <meta charset="utf-8">
-  <title>CSCI3172 - Lab 3</title>
+  <title>Taskr</title>
   <meta name="description" content="">
   <meta name="author" content="">
 
@@ -61,54 +61,68 @@ session_start();
             echo "Status: " . $_SESSION['task_status'] . "<br>";
 
             echo "Date Posted: " . $_SESSION['task_date'] . "<br>" ;
-            echo "Location: " . $_SESSION['task_location'] . "<br>" ;
             echo "Price: $" . $_SESSION['task_price'] . "<br><br>" ;
 
+            if($_SESSION['loggedin']==true){
             echo "Rate this task:";
             include 'includes/rating-form.inc.php';
+          }
           ?> 
 
         </div> 
         <div class="six columns">
-        <?php
-          $taskImage =$_SESSION['task_image'];
-          if ($taskImage == null){
-            echo "<div style='width:300px;height:150px;overflow:hidden'><img src='./images/task-picture.png' style='height:150px'><br></div>";
-        } else {
-            echo "<div style='width:300px;height:150px;overflow:hidden'><img src='.$taskImage' style='height:150px'><br></div><br>";
-        }
-        ?>
+            <?php
+              $taskImage =$_SESSION['task_image'];
+              if ($taskImage == null){
+                echo "<div style='width:300px;height:150px;overflow:hidden'><img src='./images/task-picture.png' style='height:150px'><br></div>";
+            } else {
+                echo "<div style='width:300px;height:150px;overflow:hidden'><img src='.$taskImage' style='height:150px'><br></div><br>";
+            }
+            ?>
         </div>
-
+      </div>
+      <div class="row">
+        <div class="six columns">
+            <h5> Location </h5>
+            <?php 
+                echo "Task location: ".$_SESSION['task_location'] . "<br>" ;
+                include 'map.php';
+            
+            ?>
+            <br>
+          </div>
       </div>
 
-
       <div class="row">
-      <div class="six columns">
+          <div class="six columns">
 
-      <h5> Contact </h5>
+          <h5> Contact </h5>
 
-      <?php
-          echo "Posters's name: ".$_SESSION['task_posterFirst']." ".$_SESSION['task_posterLast']. "<br>";
-          echo "Posters's email: ".$_SESSION['task_poster']. "<br><br>";
+          <?php
+              echo "Posters's name: ".$_SESSION['task_posterFirst']." ".$_SESSION['task_posterLast']. "<br>";
+              echo "Posters's email: ".$_SESSION['task_poster']. "<br><br>";
 
-        
-              echo "User's Rating: ";
-               include 'includes/rating-task.inc.php'; ?>
-              <br><br>
-              <?php
-              if($_SESSION['task_status']=='open'){
-              echo '<form id="claim_task" action ="claim_task.php" method="post">
-              <input class="button-primary" type="submit" value="I can do this!">
-              </form>';
-              }
-              else{
-                echo '<h5>This task has already been claimed!</h5>';
-              }
-              ?>
-            <a href="categories.php"><input type="button" value="Go back"></a>
 
-        </div>
+                  echo "User's Rating: ";
+                   include 'includes/rating-task.inc.php'; ?>
+                  <br><br>
+                  <?php
+
+                  if($_SESSION['loggedin']==true){
+                  if($_SESSION['task_status']=='open'){
+                  echo '<form id="claim_task" action ="claim_task.php" method="post">
+                  <input class="button-primary" type="submit" value="I can do this!">
+                  </form>';
+                  }
+                  else{
+                    echo '<h5>This task has already been claimed!</h5>';
+                  }
+                 }
+
+                  ?>
+                <a href="categories.php"><input type="button" value="Go back"></a>
+
+            </div>
         <div class="six columns">
         <?php
         $taskPosterImage = $_SESSION['task_posterImage'];
